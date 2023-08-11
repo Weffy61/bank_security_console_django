@@ -1,0 +1,15 @@
+project/settings.py
+venv
+.idea
+poetry.lock
+pyproject.toml
+.replit
+
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+*.bak
+

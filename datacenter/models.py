@@ -38,11 +38,10 @@ class Visit(models.Model):
         hours = (seconds // 60) // 60
         minutes = (seconds // 60) % 60
         seconds = (seconds % 60)
-        return {'hours': hours,
-                'minutes': minutes,
-                'seconds': seconds}
+        duration = {'hours': hours,
+                    'minutes': minutes,
+                    'seconds': seconds}
+        return f'{duration["hours"]:02d}:{duration["minutes"]:02d}:{duration["seconds"]:02d}'
 
     def is_visit_long(self, visit, minutes=60):
-        if visit > minutes * 60:
-            return True
-        return False
+        return visit > minutes * 60
