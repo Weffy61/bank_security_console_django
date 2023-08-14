@@ -14,18 +14,21 @@ cd bank_security_console_django
 pip install -r requirements.txt
 ```
 ## Настройка
-В файле `settings.py`, расположенном в директории `project` необходимо прописать свои данные для доступа к БД
+В корне проекта необходимо создать файл `.env`. В него внести данные доступа к вашей БД в местах указанных `____`.
+
 ```djangourlpath
-'ENGINE': 'ENGINE',
-'HOST': 'HOST',
-'PORT': 'PORT',
-'NAME': 'NAME',
-'USER': 'USER',
-'PASSWORD': 'PASSWORD'
+export ENGINE=____
+export HOST=____
+export PORT=____
+export NAME=____
+export USERNAME=____
+export PASSWORD=____
+
+export DEBUG=False
 ```
 ## Запуск
 ```commandline
-python main.py
+python manage.py runserver
 ```
 ## Цель проекта
 Код написан в образовательных целях на онлайн-курсе для веб-разработчиков dvmn.org.

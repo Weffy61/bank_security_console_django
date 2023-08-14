@@ -4,6 +4,7 @@ venv
 poetry.lock
 pyproject.toml
 .replit
+.env
 
 *.log
 *.pot
