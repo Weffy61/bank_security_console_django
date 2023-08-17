@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```
 ## Настройка
 В корне проекта необходимо создать файл `.env`. В него внести данные доступа к вашей БД в формате URL. 
-[Подробнее](https://github.com/jazzband/dj-database-url#url-schema).  
+[Подробнее](https://github.com/jazzband/dj-database-url#url-schema)  
 Пример:  
 
 ```djangourlpath
