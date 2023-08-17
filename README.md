@@ -14,17 +14,18 @@ cd bank_security_console_django
 pip install -r requirements.txt
 ```
 ## Настройка
-В корне проекта необходимо создать файл `.env`. В него внести данные доступа к вашей БД в местах указанных `____`.
+В корне проекта необходимо создать файл `.env`. В него внести данные доступа к вашей БД в формате URL. 
+[Подробнее](https://github.com/jazzband/dj-database-url#url-schema).  
+Пример:  
 
 ```djangourlpath
-export ENGINE=____
-export HOST=____
-export PORT=____
-export NAME=____
-export USERNAME=____
-export PASSWORD=____
-
-export DEBUG=False
+export DATABASE_URL=postgresql://USER:PASSWORD@HOST:PORT/NAME
+``` 
+Также по необходимости добавить следующие поля  
+```djangourlpath
+export SECRET_KEY=SECRET_KEY
+export DEBUG=True`
+export ALLOWED_HOSTS=[*]
 ```
 ## Запуск
 ```commandline
